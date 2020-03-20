@@ -48,9 +48,6 @@ fs.removeSync(PKG_ROOT);
 let rootPackageJson = Object.assign({}, pkg, {
   name: 'rxjs',
   main: './index.js',
-  typings: './index.d.ts',
-  module: './_esm5/index.js',
-  es2015: './_esm2015/index.js'
 });
 
 // Execute build optimizer transforms on ESM5 files

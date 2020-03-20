@@ -1,5 +1,5 @@
 {
-  "name": "@reactivex/rxjs",
+  "name": "@react-native-community/rxjs",
   "version": "6.5.4",
   "description": "Reactive Extensions for modern JavaScript",
   "main": "index.js",
@@ -44,8 +44,6 @@
     ]
   },
   "scripts": {
-    "precommit": "lint-staged",
-    "commitmsg": "validate-commit-msg",
     "build_all": "npm-run-all compat_build_all clean_dist copy_sources build_cjs build_esm5 build_esm2015 build_esm5_for_rollup build_umd build_types build_legacy_reexport build_migrations generate_packages",
     "build_cjs": "npm-run-all clean_dist_cjs compile_dist_cjs",
     "build_esm5": "npm-run-all clean_dist_esm5 compile_dist_esm5",
@@ -92,7 +90,6 @@
     "perf:protractor": "echo \"Protractor is not working currently\" && exit -1 && protractor protractor.conf.js",
     "perf:micro": "node ./perf/micro/index.js",
     "prepublish": "shx rm -rf ./typings && npm run build_all",
-    "postpublish": "./docs_app/scripts/publish-docs.sh",
     "publish_docs": "./publish_docs.sh",
     "test": "cross-env TS_NODE_PROJECT=spec/tsconfig.json mocha --opts spec/support/default.opts \"spec/**/*-spec.ts\"",
     "test_no_cache": "cross-env TS_NODE_PROJECT=spec/tsconfig.json TS_NODE_CACHE=false mocha --opts spec/support/default.opts \"spec/**/*-spec.ts\"",
@@ -252,8 +249,23 @@
   "engines": {
     "npm": ">=2.0.0"
   },
-  "typings": "./dist/package/Rx.d.ts",
   "ng-update": {
     "migrations": "./migrations/collection.json"
-  }
+  },
+  "files": [
+    "ajax/index.js",
+    "ajax/index.map",
+    "fetch/index.js",
+    "fetch/index.map",
+    "index.js.map",
+    "index.js",
+    "internal/**/!(*.ts)",
+    "LICENSE.txt",
+    "operators/index.js",
+    "operators/index.map",
+    "package.json",
+    "README.md",
+    "webSocket/index.js",
+    "webSocket/index.map"
+  ]
 }
