@@ -1,11 +1,8 @@
 {
-  "name": "rxjs",
+  "name": "@react-native-community/rxjs",
   "version": "7.0.0-alpha.1",
   "description": "Reactive Extensions for modern JavaScript",
   "main": "./dist/cjs/index.js",
-  "module": "./dist/esm5/index.js",
-  "es2015": "./dist/esm/index.js",
-  "types": "./dist/types/index.d.ts",
   "sideEffects": false,
   "config": {
     "commitizen": {
@@ -31,7 +28,6 @@
     "lint": "npm-run-all --parallel lint_*",
     "dtslint": "tsc -b ./src/tsconfig.types.json && tslint -c spec-dtslint/tslint.json -p spec-dtslint/tsconfig.json \"spec-dtslint/**/*.ts\"",
     "prepublishOnly": "npm run build:package",
-    "postpublish": "./docs_app/scripts/publish-docs.sh",
     "publish_docs": "./publish_docs.sh",
     "test": "npm run compile && mocha --opts spec/support/default.opts \"dist/spec/**/*-spec.js\"",
     "test:browser": "echo \"Browser test is not working currently\" && exit -1 && npm-run-all build:spec:browser && opn spec/support/mocha-browser-runner.html",
@@ -149,17 +145,12 @@
     "webpack": "^4.31.0"
   },
   "files": [
-    "dist/bundles",
     "dist/cjs/**/!(*.tsbuildinfo)",
-    "dist/esm/**/!(*.tsbuildinfo)",
-    "dist/esm5/**/!(*.tsbuildinfo)",
-    "dist/types/**/!(*.tsbuildinfo)",
     "ajax",
     "fetch",
     "operators",
     "testing",
     "webSocket",
-    "src",
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
     "LICENSE.txt",

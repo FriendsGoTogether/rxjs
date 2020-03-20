@@ -6,6 +6,8 @@
 
 # RxJS 7 (alpha)
 
+## NOTE: This repo is a custom fork of RxJS used to publish a smaller version of RxJS to npm (2 MiB instead of 20 MiB) under `@react-native-community/rxjs`. Please do not send pull requests to this repository. The main repository is https://github.com/ReactiveX/rxjs.
+
 ### FOR 6.X PLEASE GO TO [THE 6.x BRANCH](https://github.com/ReactiveX/rxjs/tree/6.x)
 
 Reactive Extensions Library for JavaScript. This is a rewrite of [Reactive-Extensions/RxJS](https://github.com/Reactive-Extensions/RxJS) and is the latest production-ready version of RxJS. This rewrite is meant to have better performance, better modularity, better debuggable call stacks, while staying mostly backwards compatible, with some breaking changes that reduce the API surface.
